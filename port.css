@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=MuseoModerno:ital,wght@0,100..900;1,100..900&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header{
+    text-align: center;
+    display: inline-block;
+}
+
+.museomoderno {
+  font-family: "MuseoModerno", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: normal;
+  font-style: normal;
+}
+
+body{
+    font-family: "MuseoModerno", sans;
+    background-image: linear-gradient(-45deg, #000000, #320049);
+    animation: gradient 15s ease infinite;
+    height: 100vh;
+    background-size: 400% 400%;
+    color: aliceblue;
+    justify-content: center;
+    text-align: center;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.projetos a{
+    text-decoration: none;
+    color: #f9f9f9;
+}
+
+.projetos ul{
+    list-style-type: none;
+}
+
+.navbar h1{
+  text-align: center;
+}
+
+.navbar {
+  box-shadow: 1px 1px 10px #c46eec;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f7c8fd00;
+  padding: 1rem 2rem;
+  margin: 10px;
+  border-radius: 5px;
+  color: white;
+  border: solid, #e09cff61 ;
+}
+
+.projetos{
+  font-size: 1.25em;
+  text-align: left;
+  color: aliceblue;
+  display: block;
+  margin: 10px;
+  padding: 5px;
+  border: solid, #e09cff61;
+  background-color: #7300ff05;
+  border-radius: 5px;
+}
+
+.sobre{
+  font-size: 1.25em;
+  color: aliceblue;
+  text-align: left;
+  margin: 10px;
+  padding: 5px;
+  border: solid, #e09cff61;
+  background-color: #7300ff05;
+  border-radius: 5px;
+}
+
+.linguagens{
+  font-size: 1.25em;
+  text-align: left;
+  margin: 10px;
+  padding: 10px;
+  border: solid, #e09cff61;
+  background-color: #7300ff05;
+  border-radius: 5px;
+}
+
+.logo img{
+  border-radius: 50%;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #976bff;
+}
+
+
+

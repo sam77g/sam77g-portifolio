@@ -1,0 +1,47 @@
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100vh; /* ocupa a altura inteira da tela */
+            display: flex; /* ativa o flexbox */
+            justify-content: center; /* centraliza horizontalmente */
+            align-items: center; /* centraliza verticalmente */
+            background: #1e1e2f; /* cor de fundo */
+            font-family: Arial, sans-serif; /* fonte */
+            color: #fff; /* cor do texto */
+        }
+
+        .container {
+            text-align: center; /* centraliza texto */
+            background: #2c2c3f; /* fundo do card */
+            padding: 30px; /* espaçamento interno */
+            border-radius: 10px; /* bordas arredondadas */
+            box-shadow: 0 0 15px rgba(0,0,0,0.5); /* sombra */
+        }
+
+        h1 {
+            margin-bottom: 20px; /* espaço abaixo do título */
+        }
+
+        #timer {
+            font-size: 48px; /* tamanho grande do tempo */
+            margin: 20px 0; /* espaço acima e abaixo */
+        }
+
+        button {
+            padding: 10px 20px; /* tamanho interno */
+            margin: 5px; /* espaço entre botões */
+            border: none; /* remove borda */
+            border-radius: 5px; /* borda arredondada */
+            cursor: pointer; /* muda o cursor */
+            font-size: 16px; /* tamanho do texto */
+        }
+
+        .start { background: #4caf50; } /* verde */
+        .pause { background: #ff9800; } /* laranja */
+        .reset { background: #f44336; } /* vermelho */
+
+        
