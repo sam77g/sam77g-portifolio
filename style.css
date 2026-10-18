@@ -29,7 +29,7 @@ body{
 }
 nav a,
 footer a {
-  color: aliceblue;
+  color: var(--vermelho);
   text-decoration: none;
 }
 
@@ -38,15 +38,10 @@ header {
   justify-content: flex-end;
   align-items: center;
   padding: 20px 15px;
-
-  background-color: rgba(206, 219, 144, 0.404);
-  -webkit-backdrop-filter: blur(10px); /* Suporte para Safari */
-  backdrop-filter: blur(10px); /* Padrão */
-  border-radius: 15px;
 }
 
 .logo {
-  color: aliceblue;
+  color: var(--vermelho);
   margin-right: auto;
   font-weight: bold;
   font-size: 1.5rem;
@@ -63,45 +58,4 @@ a {
   text-decoration: none;
   list-style: none;
   gap: 20px;
-}
-
-.container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: center;
-  gap: 40px;
-  margin: 50px auto;
-  padding: 0 20px;
-  max-width: 1100px;
-}
-
-/* inverte o lado na section "service" (imagem à esquerda) */
-.container:nth-of-type(even) .secImg {
-  order: -1;
-}
-
-.section-content {
-  background-color: rgba(7, 20, 167, 0.404);
-  -webkit-backdrop-filter: blur(10px); /* Suporte para Safari */
-  backdrop-filter: blur(10px); /* Padrão */
-  padding: 20px 30px;
-  border-radius: 10px;
-}
-
-.secImg img {
-  display: block;
-  width: 100%;
-  height: auto;
-  border-radius: 12px;
-}
-
-.section-title {
-  color: #2d2d52;
-  text-align: center;
-  font-weight: bold;
-  margin-bottom: 15px;
-}
-
-.section-content p {
-  text-align: left;
 }
