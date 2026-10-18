@@ -35,10 +35,11 @@ footer a {
 
 header {
   font-family: var(--navbar-font);
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  padding: 20px 15px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;          /* <- faltava isso */
+  padding: 24px 48px;
 }
 
 .logo {
@@ -149,4 +150,58 @@ body::before {
 .title{
   font-family: var(--tiulo);
   color: var(--vermelho);
+}
+
+body {
+  position: relative;
+  min-height: 100vh;
+}
+
+/* logo no canto, igual ao design */
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 24px 48px;
+}
+
+/* bloco do título + texto */
+.hero {
+  min-height: 100vh;
+  padding: 32vh 48px 0 48px;
+}
+
+.hero-tile {
+  font-size: 7.15vw;   /* ocupa ~60% da largura, como no Figma */
+  line-height: 1;
+  font-weight: normal;
+  margin-bottom: 12px;
+}
+
+.hero-text {
+  font-family: var(--text-font), sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.4;
+  max-width: 800px;    /* quebra em 3 linhas e não encosta nas faixas */
+  padding-left: 15px;
+  color: #000;
+}
+
+footer {
+  position: absolute;
+  bottom: 20px;
+  left: 48px;
+  font-size: 14px;
+}
+
+/* telas médias: texto não passa por baixo das faixas */
+@media (max-width: 1200px) {
+  .hero-text { max-width: calc(100vw - 705px - 96px); }
+}
+
+/* mobile */
+@media (max-width: 800px) {
+  .hero { padding-top: 20vh; }
+  .hero-tile { font-size: 15vw; }
+  .hero-text { max-width: 100%; padding-left: 0; }
 }
