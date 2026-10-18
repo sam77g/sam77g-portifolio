@@ -1,5 +1,11 @@
 @import url('https://fonts.cdnfonts.com/css/museomoderno');
-
+@font-face {
+  font-family: 'porter-sans-inline-block';
+  src: url('./assets/font/porter_sans_block/porter-sans-inline-block-webfont.woff') format('woff2'),
+       url('./assets/font/porter_sans_block/porter-sans-inline-block-webfont.woff/porter-sans-inline-block.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
 *{
   padding: 0;
   margin: 0;
@@ -8,7 +14,7 @@
 
 body{
   font-family: 'MuseoModerno', sans-serif;
-  background-color: rgb(18, 0, 30);
+  background-color: #FCE69E;
 }
 nav a,
 footer a {
@@ -22,7 +28,7 @@ header {
   align-items: center;
   padding: 20px 15px;
 
-  background-color: rgba(31, 7, 167, 0.404);
+  background-color: rgba(206, 219, 144, 0.404);
   -webkit-backdrop-filter: blur(10px); /* Suporte para Safari */
   backdrop-filter: blur(10px); /* Padrão */
   border-radius: 15px;
