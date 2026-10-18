@@ -24,7 +24,7 @@
 }
 
 body{
-  font-family: 'Post No Bills Colombo', sans-serif;
+  font-family: var(--text-font), sans-serif;
   background-color: #FCE69E;
 }
 nav a,
@@ -34,6 +34,7 @@ footer a {
 }
 
 header {
+  font-family: var(--navbar-font);
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -54,8 +55,15 @@ a {
 }
 
 .nav-links {
+  font-family: var(--text-font),sans-serif;
   display: inline-block;
   text-decoration: none;
   list-style: none;
   gap: 20px;
+}
+
+
+.title{
+  font-family: var(--tiulo);
+  color: var(--vermelho);
 }
