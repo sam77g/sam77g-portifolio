@@ -126,18 +126,18 @@ a {
   );
 }
 
-/* textura de granulado (opcional) */
 body::before {
   content: "";
   position: fixed;
   inset: 0;
   pointer-events: none;
   z-index: 20;
-  opacity: .25;
+  opacity: .35;
   mix-blend-mode: multiply;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='600'%3E%3Cfilter id='f'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.012 .04' numOctaves='3'/%3E%3CfeColorMatrix values='0 0 0 0 .45 0 0 0 0 .3 0 0 0 0 .1 0 0 0 .5 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23f)'/%3E%3C/svg%3E");
 }
-
 /* mobile: esconde as faixas e volta pra nav simples */
 @media (max-width: 800px) {
   .navbar { position: static; width: auto; height: auto; }
@@ -204,4 +204,44 @@ footer {
   .hero { padding-top: 20vh; }
   .hero-tile { font-size: 15vw; }
   .hero-text { max-width: 100%; padding-left: 0; }
+}
+
+/* 1. papel velho: manchas + bordas escurecidas */
+body {
+  background-color: var(--fundo);
+  background-image:
+    radial-gradient(ellipse at center, transparent 55%, rgba(120, 70, 10, .30) 100%),
+    radial-gradient(circle at 18% 28%, rgba(150, 100, 30, .14), transparent 38%),
+    radial-gradient(circle at 78% 72%, rgba(150, 100, 30, .12), transparent 34%),
+    radial-gradient(circle at 55% 12%, rgba(150, 100, 30, .08), transparent 30%);
+  background-attachment: fixed;
+}
+
+/* 2. linhas + colunas vermelhas */
+:root {
+  --linha-cor: rgba(171, 2, 2, .35);
+  --linha-gap: 32px;        /* distância entre as linhas horizontais */
+  --coluna-x: 48px;         /* posição da coluna vermelha da esquerda */
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background-image:
+    /* linhas horizontais */
+    repeating-linear-gradient(
+      to bottom,
+      transparent 0 calc(var(--linha-gap) - 1px),
+      var(--linha-cor) calc(var(--linha-gap) - 1px) var(--linha-gap)
+    ),
+    /* coluna dupla à esquerda */
+    linear-gradient(to right,
+      transparent calc(var(--coluna-x) - 4px),
+      var(--linha-cor) calc(var(--coluna-x) - 4px) calc(var(--coluna-x) - 3px),
+      transparent calc(var(--coluna-x) - 3px) calc(var(--coluna-x) + 1px),
+      var(--linha-cor) calc(var(--coluna-x) + 1px) calc(var(--coluna-x) + 2px),
+      transparent calc(var(--coluna-x) + 2px));
 }
