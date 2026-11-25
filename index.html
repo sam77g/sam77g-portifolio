@@ -3,36 +3,234 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> sam77g Portifolio </title>
+    <meta name="description" content="Portfólio de Samuel — desenvolvedor frontend, estudante de ADS, entusiasta de open source e Linux.">
+    <title>Samuel | sam77g</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />       
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
 </head>
 <body>
-    <header>
 
-        <nav class="navbar">
-            <h2>SAMUEL</h2> 
-            
-            <ul>
-                <a href="#sobre">Sobre</a>
-                <a href="#ferramentas">Tecnologias</a>
-                <a href="#projetos">Projetos</a>
-                <a href="#cursos">Cursos</a>
-                <a href="#escolaridade">Escolaridade</a>
+    <header class="header" id="topo">
+        <nav class="navbar" aria-label="Navegação principal">
+            <a href="#topo" class="logo">sam<span>77</span>g</a>
+
+            <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#projetos">Projetos</a></li>
+                <li><a href="#stack">Stack</a></li>
+                <li><a href="#cursos">Cursos</a></li>
+                <li><a href="#escolaridade">Escolaridade</a></li>
             </ul>
         </nav>
-
     </header>
 
-    <main></main>
+    <main>
 
-    <footer>
-        <a href="https://github.com/sam77g" target="_blank"> 
-            <i class="devicon-github-original"></i>
-    </a>
-    <a href="http://www.linkedin.com/in/samuel-santana-assis" target="_blank"> 
-        <i class="devicon-linkedin-plain"></i>
-    </a>
+        <!-- HERO -->
+        <section class="hero">
+            <div class="hero-content reveal">
+                <p class="hero-tag">&lt; olá, mundo /&gt;</p>
+                <h1>Eu sou o <span class="gradient-text">Samuel</span></h1>
+                <p class="hero-sub">Desenvolvedor frontend transformando ideias em produtos funcionais.</p>
+                <div class="hero-actions">
+                    <a href="#projetos" class="btn btn-primary">Ver projetos</a>
+                    <a href="https://github.com/sam77g" target="_blank" rel="noopener" class="btn btn-ghost">
+                        <i class="devicon-github-original"></i> GitHub
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- SOBRE -->
+        <section class="section" id="sobre">
+            <h2 class="section-title reveal"><span>01.</span> Sobre mim</h2>
+            <div class="card about reveal">
+                <p>
+                    Sou desenvolvedor <strong>frontend</strong> e estudante do <strong>2º semestre</strong> de
+                    Análise e Desenvolvimento de Sistemas. Gosto de transformar ideias em produtos funcionais:
+                    interfaces responsivas, aplicações web, PWAs e sistemas com backend próprio.
+                </p>
+                <ul class="about-list">
+                    <li>Foco em <strong>frontend</strong>, com experiência em <strong>backend</strong> (Node.js, Python) e banco de dados</li>
+                    <li>Entusiasta de <strong>open source</strong> e <strong>Linux</strong></li>
+                    <li>Aprendizado orientado a projetos desafiadores e entregas reais</li>
+                    <li>Uso de <strong>IA</strong> como ferramenta de produtividade no desenvolvimento</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- PROJETOS -->
+        <section class="section" id="projetos">
+            <h2 class="section-title reveal"><span>02.</span> Projetos em destaque</h2>
+
+            <div class="projects-grid">
+
+                <article class="card project reveal">
+                    <div class="project-top">
+                        <i class="devicon-react-original colored project-icon"></i>
+                        <a href="https://github.com/sam77g/AMPARO" target="_blank" rel="noopener" class="project-link" aria-label="AMPARO no GitHub">
+                            <i class="devicon-github-original"></i>
+                        </a>
+                    </div>
+                    <h3>AMPARO</h3>
+                    <p>Plataforma de monitoramento de saúde voltada a idosos.</p>
+                    <ul class="tags"><li>React</li><li>Vite</li></ul>
+                </article>
+
+                <article class="card project reveal">
+                    <div class="project-top">
+                        <i class="devicon-nodejs-plain colored project-icon"></i>
+                    </div>
+                    <h3>ZUME</h3>
+                    <p>Aplicativo de produtividade para estudos baseado na técnica Pomodoro.</p>
+                    <ul class="tags"><li>JavaScript</li><li>Node.js</li></ul>
+                </article>
+
+                <article class="card project reveal">
+                    <div class="project-top">
+                        <i class="devicon-chrome-plain colored project-icon"></i>
+                        <a href="https://github.com/sam77g/LavaJatoPWA" target="_blank" rel="noopener" class="project-link" aria-label="PWA para lava-jato no GitHub">
+                            <i class="devicon-github-original"></i>
+                        </a>
+                    </div>
+                    <h3>PWA para lava-jato</h3>
+                    <p>Sistema de gestão para um lava-jato, instalável como aplicativo.</p>
+                    <ul class="tags"><li>JavaScript</li><li>PWA</li></ul>
+                </article>
+
+                <article class="card project reveal">
+                    <div class="project-top">
+                        <i class="devicon-javascript-plain colored project-icon"></i>
+                        <a href="https://github.com/sam77g/DASHBOARD_GAMER" target="_blank" rel="noopener" class="project-link" aria-label="Dashboard Gamer no GitHub">
+                            <i class="devicon-github-original"></i>
+                        </a>
+                    </div>
+                    <h3>Dashboard Gamer</h3>
+                    <p>Registro de jogos, horas jogadas e plataforma.</p>
+                    <ul class="tags"><li>HTML</li><li>CSS</li><li>JavaScript</li></ul>
+                </article>
+
+                <article class="card project reveal">
+                    <div class="project-top">
+                        <i class="devicon-python-plain colored project-icon"></i>
+                        <a href="https://github.com/sam77g/PharmaERP" target="_blank" rel="noopener" class="project-link" aria-label="PharmaERP no GitHub">
+                            <i class="devicon-github-original"></i>
+                        </a>
+                    </div>
+                    <h3>PharmaERP</h3>
+                    <p>ERP de farmácia com controle de medicamentos, relatórios e histórico de entrada/saída.</p>
+                    <ul class="tags"><li>Python</li></ul>
+                </article>
+
+                <article class="card project reveal">
+                    <div class="project-top">
+                        <i class="devicon-bootstrap-plain colored project-icon"></i>
+                        <a href="https://github.com/sam77g/EmeraldTurism" target="_blank" rel="noopener" class="project-link" aria-label="Landing page de turismo no GitHub">
+                            <i class="devicon-github-original"></i>
+                        </a>
+                    </div>
+                    <h3>Landing page de turismo</h3>
+                    <p>Página institucional responsiva para empresa de turismo.</p>
+                    <ul class="tags"><li>HTML5</li><li>CSS3</li><li>Bootstrap</li></ul>
+                </article>
+
+            </div>
+
+            <p class="more reveal">
+                Veja todos os repositórios em
+                <a href="https://github.com/sam77g?tab=repositories" target="_blank" rel="noopener">github.com/sam77g</a>
+            </p>
+        </section>
+
+        <!-- STACK -->
+        <section class="section" id="stack">
+            <h2 class="section-title reveal"><span>03.</span> Stack e ferramentas</h2>
+
+            <div class="stack-grid">
+
+                <div class="card stack-card reveal">
+                    <h3>Frontend</h3>
+                    <ul class="chips">
+                        <li><i class="devicon-javascript-plain colored"></i> JavaScript</li>
+                        <li><i class="devicon-html5-plain colored"></i> HTML</li>
+                        <li><i class="devicon-css3-plain colored"></i> CSS</li>
+                    </ul>
+                </div>
+
+                <div class="card stack-card reveal">
+                    <h3>Backend</h3>
+                    <ul class="chips">
+                        <li><i class="devicon-python-plain colored"></i> Python</li>
+                        <li><i class="devicon-c-plain colored"></i> C</li>
+                        <li><i class="devicon-nodejs-plain colored"></i> Node.js</li>
+                    </ul>
+                </div>
+
+                <div class="card stack-card reveal">
+                    <h3>Banco de dados</h3>
+                    <ul class="chips">
+                        <li><i class="devicon-mysql-plain colored"></i> MySQL</li>
+                        <li><i class="devicon-supabase-plain colored"></i> Supabase</li>
+                    </ul>
+                </div>
+
+                <div class="card stack-card reveal">
+                    <h3>Design e UI/UX</h3>
+                    <ul class="chips">
+                        <li><i class="devicon-figma-plain colored"></i> Figma</li>
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- CURSOS -->
+        <section class="section" id="cursos">
+            <h2 class="section-title reveal"><span>04.</span> Cursos</h2>
+            <ul class="timeline reveal">
+                <li>
+                    <strong>JavaScript</strong>
+                    <span>Curso em Vídeo · 2026</span>
+                </li>
+                <li>
+                    <strong>Algoritmos e Lógica de Programação</strong>
+                    <span>Curso em Vídeo · 2026</span>
+                </li>
+                <li>
+                    <strong>HTML5 e CSS3</strong>
+                    <span>Curso em Vídeo · 2026 · <em>em andamento</em></span>
+                </li>
+            </ul>
+        </section>
+
+        <!-- ESCOLARIDADE -->
+        <section class="section" id="escolaridade">
+            <h2 class="section-title reveal"><span>05.</span> Escolaridade</h2>
+            <div class="card reveal">
+                <h3>Análise e Desenvolvimento de Sistemas</h3>
+                <p class="muted">Cursando o 2º semestre</p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="socials">
+            <a href="https://github.com/sam77g" target="_blank" rel="noopener" aria-label="GitHub">
+                <i class="devicon-github-original"></i>
+            </a>
+            <a href="http://www.linkedin.com/in/samuel-santana-assis" target="_blank" rel="noopener" aria-label="LinkedIn">
+                <i class="devicon-linkedin-plain"></i>
+            </a>
+        </div>
+        <p>© 2026 Samuel · sam77g</p>
     </footer>
+
+    <script src="script.js"></script>
+        
 </body>
 </html>
