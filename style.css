@@ -1,247 +1,69 @@
-@import url('https://fonts.cdnfonts.com/css/museomoderno');
-@import url('https://fonts.cdnfonts.com/css/post-no-bills-colombo');
-@import url('https://fonts.cdnfonts.com/css/trispace');
-@font-face {
-  font-family: 'porter-sans-inline-block';
-  src: url('./assets/font/porter_sans_block/porter-sans-inline-block-webfont.woff') format('woff2'),
-       url('./assets/font/porter_sans_block/porter-sans-inline-block-webfont.woff/porter-sans-inline-block.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
-*{
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
+/*fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Boldonse&family=Comfortaa:wght@300..700&family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Google+Sans+Code:ital,wght,MONO@0,300..800,1;1,300..800,1&family=Martian+Mono:wght@100..800&family=MuseoModerno:ital,wght@0,100..900;1,100..900&display=swap');
 
+/* GLOBAL CONFIGURES*/
+/*colors*/
+/*pallet : seamless pattern - texture of synthwave styled abstract pattern */
 :root{
-  --vermelho : #AB0202 ;
-  --verde : #589C10 ;
-  --fundo : #FCE69E ;
-  --tiulo : 'porter-sans-inline-block' ; 
-  --navbar-font : 'Post No Bills Colombo';
-  --text-font : 'Trispace';
+  --primary-color : #AC41F2;
+  --secundary-color : #4C2CBF;
+  --thirdy-color : #1BF2F2 ;
+  --forthy-color : #16B4F2 ;
+  --fivethy-color : #155FBF ;
+  --title-font : 'Boldonse';
+  --text-font : 'Fira Sans';
+  --text-code-font : 'Martian Mono' ;
+  --text-color : #fafafa;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body{
-  font-family: var(--text-font), sans-serif;
-  background-color: #FCE69E;
-}
-nav a,
-footer a {
-  color: var(--vermelho);
-  text-decoration: none;
-}
-
-header {
-  font-family: var(--navbar-font);
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;          /* <- faltava isso */
-  padding: 24px 48px;
+    font-family: var(--text-code-font), Helvetica, sans-serif;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: var(--secundary-color);
+    color: aliceblue;
 }
 
-.logo {
-  color: var(--vermelho);
-  margin-right: auto;
-  font-weight: bold;
-  font-size: 1.5rem;
+/*cabeçalho*/
+header{
+    text-align: center;
+    padding : 0 ;
+    margin: 0;
 }
 
-li,
-a {
-  font-size: 18px;
-  cursor: pointer;
+/*navbar*/
+.navbar{
+    position: fixed;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    width: 100%;
+    text-decoration: none;
+    padding: 10px;
+    background-color: rgba(2, 0, 126, 0.493); 
 }
 
-.navbar {
-  position: absolute;
-  top: 0;
-  right: 0;
-  height: 100vh;
-  width: 705px;
-  z-index: 10;
+nav a{
+    cursor:pointer;
+    list-style:none;
+}
+nav a:hover{
+    color:rgb(135, 147, 255);
+    filter: brightness(1.5);
 }
 
-.navbar ul {
-  position: relative;
-  height: 100%;
-  list-style: none;
+a{
+    color: white;
+    text-decoration: none;
 }
 
-.tab {
-  position: absolute;
-  top: 0;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  padding-top: 20px;
-}
-
-.tab a {
-  color: var(--fundo);
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-size: 18px;
-}
-
-/* verde esquerdo */
-.verde-1 {
-  left: 0;
-  width: 306px;
-  padding-right: 96px; /* centraliza o texto na parte larga */
-  background: var(--verde);
-  clip-path: polygon(
-    0 0, 210px 0,
-    306px 237px, 306px 100%,
-    215px 100%, 215px 237px
-  );
-}
-
-/* vermelho central */
-.vermelho {
-  left: 253px;
-  width: 255px;
-  background: #960000;
-  clip-path: polygon(
-    0 0, 255px 0,
-    177px 237px, 177px 100%,
-    86px 100%, 86px 237px
-  );
-}
-
-/* verde direito */
-.verde-2 {
-  left: 463px;
-  width: 242px;
-  padding-left: 97px;
-  background: var(--verde);
-  clip-path: polygon(
-    97px 0, 242px 0,
-    242px 72px, 91px 237px,
-    91px 100%, 0 100%,
-    0 237px
-  );
-}
-
-body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  z-index: 20;
-  opacity: .35;
-  mix-blend-mode: multiply;
-  background-image:
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"),
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='600'%3E%3Cfilter id='f'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.012 .04' numOctaves='3'/%3E%3CfeColorMatrix values='0 0 0 0 .45 0 0 0 0 .3 0 0 0 0 .1 0 0 0 .5 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23f)'/%3E%3C/svg%3E");
-}
-/* mobile: esconde as faixas e volta pra nav simples */
-@media (max-width: 800px) {
-  .navbar { position: static; width: auto; height: auto; }
-  .navbar ul { display: flex; gap: 16px; }
-  .tab { position: static; clip-path: none; background: none; padding: 0; width: auto; }
-  .tab a { color: var(--vermelho); }
-}
-
-
-.title{
-  font-family: var(--tiulo);
-  color: var(--vermelho);
-}
-
-body {
-  position: relative;
-  min-height: 100vh;
-}
-
-/* logo no canto, igual ao design */
-header {
-  position: absolute;
-  top: 0;
-  left: 0;
-  padding: 24px 48px;
-}
-
-/* bloco do título + texto */
-.hero {
-  min-height: 100vh;
-  padding: 32vh 48px 0 48px;
-}
-
-.hero-tile {
-  font-size: 7.15vw;   /* ocupa ~60% da largura, como no Figma */
-  line-height: 1;
-  font-weight: normal;
-  margin-bottom: 12px;
-}
-
-.hero-text {
-  font-family: var(--text-font), sans-serif;
-  font-size: 1.2rem;
-  line-height: 1.4;
-  max-width: 800px;    /* quebra em 3 linhas e não encosta nas faixas */
-  padding-left: 15px;
-  color: #000;
-}
-
-footer {
-  position: absolute;
-  bottom: 20px;
-  left: 48px;
-  font-size: 14px;
-}
-
-/* telas médias: texto não passa por baixo das faixas */
-@media (max-width: 1200px) {
-  .hero-text { max-width: calc(100vw - 705px - 96px); }
-}
-
-/* mobile */
-@media (max-width: 800px) {
-  .hero { padding-top: 20vh; }
-  .hero-tile { font-size: 15vw; }
-  .hero-text { max-width: 100%; padding-left: 0; }
-}
-
-/* 1. papel velho: manchas + bordas escurecidas */
-body {
-  background-color: var(--fundo);
-  background-image:
-    radial-gradient(ellipse at center, transparent 55%, rgba(120, 70, 10, .30) 100%),
-    radial-gradient(circle at 18% 28%, rgba(150, 100, 30, .14), transparent 38%),
-    radial-gradient(circle at 78% 72%, rgba(150, 100, 30, .12), transparent 34%),
-    radial-gradient(circle at 55% 12%, rgba(150, 100, 30, .08), transparent 30%);
-  background-attachment: fixed;
-}
-
-/* 2. linhas + colunas vermelhas */
-:root {
-  --linha-cor: rgba(171, 2, 2, .35);
-  --linha-gap: 32px;        /* distância entre as linhas horizontais */
-  --coluna-x: 48px;         /* posição da coluna vermelha da esquerda */
-}
-
-body::after {
-  content: "";
-  position: fixed;
-  inset: 0;
-  z-index: -1;
-  pointer-events: none;
-  background-image:
-    /* linhas horizontais */
-    repeating-linear-gradient(
-      to bottom,
-      transparent 0 calc(var(--linha-gap) - 1px),
-      var(--linha-cor) calc(var(--linha-gap) - 1px) var(--linha-gap)
-    ),
-    /* coluna dupla à esquerda */
-    linear-gradient(to right,
-      transparent calc(var(--coluna-x) - 4px),
-      var(--linha-cor) calc(var(--coluna-x) - 4px) calc(var(--coluna-x) - 3px),
-      transparent calc(var(--coluna-x) - 3px) calc(var(--coluna-x) + 1px),
-      var(--linha-cor) calc(var(--coluna-x) + 1px) calc(var(--coluna-x) + 2px),
-      transparent calc(var(--coluna-x) + 2px));
+/*rodapé*/
+footer{
+    text-align: center;
 }
